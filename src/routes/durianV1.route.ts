@@ -44,6 +44,109 @@
  *                     type: string
  *                   updatedAt:
  *                     type: string
+ *   post:
+ *     summary: new Durian
+ *     tags:
+ *       - Durian
+ *     parameters:
+ *       - name: rfid
+ *         in: body
+ *         description: rfid
+ *         required: true
+ *         schema:
+ *           type: string
+ *       - name: owner
+ *         in: body
+ *         description: owner
+ *         required: true
+ *         schema:
+ *           type: string
+ *       - name: name
+ *         in: body
+ *         description: name
+ *         schema:
+ *           type: string
+ *       - name: type
+ *         in: body
+ *         description: type
+ *         schema:
+ *           type: string
+ *       - name: longitude
+ *         in: body
+ *         description: longitude
+ *         schema:
+ *           type: number
+ *       - name: latitude
+ *         in: body
+ *         description: latitude
+ *         schema:
+ *           type: number
+ *     responses:
+ *       201:
+ *         description: new Durian
+ *         schema:
+ *           type: object
+ *           properties:
+ *             status:
+ *               type: integer
+ *               default: 201
+ *             error:
+ *               type: boolean
+ *               default: false
+ *             message:
+ *               type: string
+ *               default: Created
+ *   put:
+ *     summary: update Durian
+ *     tags:
+ *       - Durian
+ *     parameters:
+ *       - name: rfid
+ *         in: body
+ *         description: rfid
+ *         required: true
+ *         schema:
+ *           type: string
+ *       - name: owner
+ *         in: body
+ *         description: owner
+ *         schema:
+ *           type: string
+ *       - name: name
+ *         in: body
+ *         description: name
+ *         schema:
+ *           type: string
+ *       - name: type
+ *         in: body
+ *         description: type
+ *         schema:
+ *           type: string
+ *       - name: longitude
+ *         in: body
+ *         description: longitude
+ *         schema:
+ *           type: number
+ *       - name: latitude
+ *         in: body
+ *         description: latitude
+ *         schema:
+ *           type: number
+ *     responses:
+ *       200:
+ *         description: new Durian
+ *         schema:
+ *           type: object
+ *           properties:
+ *             status:
+ *               type: integer
+ *               default: 200
+ *             error:
+ *               type: boolean
+ *               default: false
+ *             message:
+ *               type: string
+ *               default: OK
  * /v1/durian?id={id}:
  *   get:
  *     summary: get Durian by id
@@ -130,111 +233,6 @@
  *                     type: string
  *                   updatedAt:
  *                     type: string
- * /v1/durian:
- *   post:
- *     summary: new Durian
- *     tags:
- *       - Durian
- *     parameters:
- *       - name: rfid
- *         in: body
- *         description: rfid
- *         required: true
- *         schema:
- *           type: string
- *       - name: owner
- *         in: body
- *         description: owner
- *         required: true
- *         schema:
- *           type: string
- *       - name: name
- *         in: body
- *         description: name
- *         schema:
- *           type: string
- *       - name: type
- *         in: body
- *         description: type
- *         schema:
- *           type: string
- *       - name: longitude
- *         in: body
- *         description: longitude
- *         schema:
- *           type: number
- *       - name: latitude
- *         in: body
- *         description: latitude
- *         schema:
- *           type: number
- *     responses:
- *       201:
- *         description: new Durian
- *         schema:
- *           type: object
- *           properties:
- *             status:
- *               type: integer
- *               default: 201
- *             error:
- *               type: boolean
- *               default: false
- *             message:
- *               type: string
- *               default: Created
- * /v1/durian:
- *   put:
- *     summary: update Durian
- *     tags:
- *       - Durian
- *     parameters:
- *       - name: rfid
- *         in: body
- *         description: rfid
- *         required: true
- *         schema:
- *           type: string
- *       - name: owner
- *         in: body
- *         description: owner
- *         schema:
- *           type: string
- *       - name: name
- *         in: body
- *         description: name
- *         schema:
- *           type: string
- *       - name: type
- *         in: body
- *         description: type
- *         schema:
- *           type: string
- *       - name: longitude
- *         in: body
- *         description: longitude
- *         schema:
- *           type: number
- *       - name: latitude
- *         in: body
- *         description: latitude
- *         schema:
- *           type: number
- *     responses:
- *       200:
- *         description: new Durian
- *         schema:
- *           type: object
- *           properties:
- *             status:
- *               type: integer
- *               default: 200
- *             error:
- *               type: boolean
- *               default: false
- *             message:
- *               type: string
- *               default: OK
  * /v1/durian/grade:
  *   put:
  *     summary: update Durian

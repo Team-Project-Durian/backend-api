@@ -3,9 +3,9 @@ import { Options } from "swagger-jsdoc";
 const swaggerOptions: Options = {
   definition: {
     info: {
-      title: "express typescript boilerplate",
+      title: "team-project-durian-backend",
       version: "1.0.0",
-      description: "A boilerplate for express typescript",
+      description: "team-project-durian-backend",
       license: {
         name: "MIT",
         url: "https://spdx.org/licenses/MIT.html",

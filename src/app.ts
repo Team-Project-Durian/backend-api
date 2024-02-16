@@ -13,7 +13,7 @@ import { logger } from "./utils/logger.util";
 import { corsOptions } from "./config/cors.config";
 import { swaggerOptions } from "./config/swagger.config";
 import basePath from "./routes/base.route";
-import durianV1 from "./routes/durianV1.route";
+import durianV1 from "./routes/durianv1.route";
 
 dotenv.config();
 checkENV();
