@@ -44,7 +44,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 app.use("/", basePath);
 app.use("/v1/durian", durianV1);
 
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV !== "production" || process.env.DOCS === "true") {
   console.log("Swagger UI is running at /api-docs");
   app.use(
     "/api-docs",

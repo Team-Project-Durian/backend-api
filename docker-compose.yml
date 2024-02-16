@@ -2,15 +2,18 @@ version: "3.8"
 
 services:
   app:
-    container_name: { { container_name } }
+    container_name: team-project-durian-backend
     build:
       context: ./
       dockerfile: Dockerfile
     volumes:
       - ./src:/app/src
     networks:
-      - npm_default
+      - proxy_default
+      - database
 
 networks:
-  npm_default:
+  proxy_default:
+    external: true
+  database:
     external: true
