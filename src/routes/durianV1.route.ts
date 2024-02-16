@@ -278,7 +278,7 @@ import {
   newDurian,
   updateDurian,
   setGradeDurian,
-} from "../../controllers/v1/durian.controller";
+} from "../controllers/v1/durian.controller";
 
 const router = Router();
 
